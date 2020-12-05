@@ -18,11 +18,11 @@ function setup() {
 
 	//Create the Bodies Here.
 
-	bob1=new bob(800-80,675,40);
-	bob2=new bob(800-40,675,40);
-	bob3=new bob(800,675,40);
-	bob4=new bob(800+40,675,40);
-	bob5=new bob(800+80,675,40);
+	bob1=new bob1(800-80,675,40);
+	bob2=new bob2(800-40,675,40);
+	bob3=new bob3(800,675,40);
+	bob4=new bob4(800+40,675,40);
+	bob5=new bob5(800+80,675,40);
 
 	roof = new Roof(width/2,height/4,400,20);
 	
@@ -32,8 +32,6 @@ function setup() {
 	rope3 = new rope(bob3.body,roof.body,0*2,0);
 	rope4 = new rope(bob4.body,roof.body,33*2,0);
 	rope5 = new rope(bob5.body,roof.body,66*2,0);
-
-	Engine.run(engine);
   
 }
 
@@ -48,7 +46,7 @@ function draw() {
   bob4.display();
   bob5.display();
 
-  roof.display();
+  //roof.display();
 
   rope1.display();
   rope2.display();
@@ -63,12 +61,3 @@ function draw() {
   }*/
  
 }
-
-function keyPressed() {
-	if(keyCode === UP_ARROW) {
-		Matter.Body.applyForce(bob1.body,bob1.position,{x:-100,y:100});
-	}
-}
-
-
-
